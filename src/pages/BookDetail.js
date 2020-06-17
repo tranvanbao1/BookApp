@@ -6,6 +6,7 @@ import {
   Text,
   StyleSheet,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
@@ -14,10 +15,21 @@ import Icon2 from 'react-native-vector-icons/Feather';
 import ReadMore from 'react-native-read-more-text';
 
 class BookDetails extends React.Component {
+  constructor(props, route) {
+    super(props, route);
+    this.state = {
+      route : this.props,
+      chapter: route.params,
+      data: [
+        this.chapter
+      ],
+    };
+  }
+
   render() {
     const {route} = this.props;
-    const {img, name, author, des} = route.params;
-
+    const {img, name, author, des, chapter} = route.params;
+    const {navigation} = this.props;
     return (
       <ScrollView style={styles.bg} showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
@@ -78,8 +90,96 @@ class BookDetails extends React.Component {
               </View>
             </View>
           </View>
+          <View style={{backgroundColor: '#F2F9FF', paddingBottom: 10}}>
+            <Text style={styles.title}>Chapters</Text>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginHorizontal: 10,
+                  marginVertical: 5,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                {chapter.chapter1}
+              </Text>
+              <Icon2
+                style={{alignSelf: 'center', marginRight: 10}}
+                size={20}
+                name="play-circle"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginHorizontal: 10,
+                  marginVertical: 5,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                {chapter.chapter2}
+              </Text>
+              <Icon2
+                style={{alignSelf: 'center', marginRight: 10}}
+                size={20}
+                name="play-circle"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginHorizontal: 10,
+                  marginVertical: 5,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                {chapter.chapter3}
+              </Text>
+              <Icon2
+                style={{alignSelf: 'center', marginRight: 10}}
+                size={20}
+                name="play-circle"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginHorizontal: 10,
+                  marginVertical: 5,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                {chapter.chapter4}
+              </Text>
+              <Icon2
+                style={{alignSelf: 'center', marginRight: 10}}
+                size={20}
+                name="play-circle"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              <Text
+                style={{
+                  marginHorizontal: 10,
+                  marginVertical: 5,
+                  fontSize: 16,
+                  fontWeight: '700',
+                }}>
+                {chapter.chapter5}
+              </Text>
+              <Icon2
+                style={{alignSelf: 'center', marginRight: 10}}
+                size={20}
+                name="play-circle"
+              />
+            </TouchableOpacity>
+          </View>
+          <Text style={{alignSelf: 'center', marginHorizontal: 10, marginVertical: 10, paddingBottom: 100}}>If you are the copyright owner of this audio and believe it has been uploaded without your permission, please send an email to brady@enclave.vn about the copyright infringement</Text>
         </View>
-        
       </ScrollView>
     );
   }
@@ -158,6 +258,6 @@ const styles = StyleSheet.create({
   card: {
     width: '95%',
     alignSelf: 'center',
-    paddingBottom: 20,
+    // paddingBottom: 10,
   },
 });
