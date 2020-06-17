@@ -23,6 +23,7 @@ const data = [
       chapter4: 'Đắc Nhân Tâm - Phần 4',
       chapter5: 'Đắc Nhân Tâm - Phần 5',
     },
+    url: require('../../tracks/dnt.mp3'),
   },
   {
     name: 'Đắc Nhân Tâm',
@@ -30,6 +31,14 @@ const data = [
     imageUrl: require('../../images/dnt.jpg'),
     des:
       'Đắc nhân tâm (tên tiếng Anh là How to Win Friends and Influence People) là một quyển sách tự giúp bản thân, do Dale Carnegie viết và đã được xuất bản lần đầu vào năm 1936, nó đã được dịch ra các thứ tiếng và bán trên khắp thế giới. Quyển sách đưa ra các lời khuyên về cách thức cư xử, ứng xử và giao tiếp với mọi người để đạt được thành công trong cuộc sống. Không còn nữa khái niệm giới hạn Đắc Nhân Tâm là nghệ thuật thu phục lòng người, là làm cho tất cả mọi người yêu mến mình. Đắc nhân tâm và cái Tài trong mỗi người chúng ta. Đắc Nhân Tâm trong ý nghĩa đó cần được thụ đắc bằng sự hiểu rõ bản thân, thành thật với chính mình, hiểu biết và quan tâm đến những người xung quanh để nhìn ra và khơi gợi những tiềm năng ẩn khuất nơi họ, giúp họ phát triển lên một tầm cao mới. Đây chính là nghệ thuật cao nhất về con người và chính là ý nghĩa sâu sắc nhất đúc kết từ những nguyên tắc vàng của Dale Carnegie. Quyển sách đã từng mang đến thành công và hạnh phúc cho hàng triệu người trên khắp thế giới. Và bây giờ các bạn và tôi cùng bắt đầu phân tích và tìm hiểu nó !',
+    chapter: {
+      chapter1: 'Đắc Nhân Tâm - Phần 1',
+      chapter2: 'Đắc Nhân Tâm - Phần 2',
+      chapter3: 'Đắc Nhân Tâm - Phần 3',
+      chapter4: 'Đắc Nhân Tâm - Phần 4',
+      chapter5: 'Đắc Nhân Tâm - Phần 5',
+    },
+    url: require('../../tracks/dnt.mp3'),
   },
   {
     name: 'Đắc Nhân Tâm',
@@ -37,6 +46,14 @@ const data = [
     imageUrl: require('../../images/dnt.jpg'),
     des:
       'Đắc nhân tâm (tên tiếng Anh là How to Win Friends and Influence People) là một quyển sách tự giúp bản thân, do Dale Carnegie viết và đã được xuất bản lần đầu vào năm 1936, nó đã được dịch ra các thứ tiếng và bán trên khắp thế giới. Quyển sách đưa ra các lời khuyên về cách thức cư xử, ứng xử và giao tiếp với mọi người để đạt được thành công trong cuộc sống. Không còn nữa khái niệm giới hạn Đắc Nhân Tâm là nghệ thuật thu phục lòng người, là làm cho tất cả mọi người yêu mến mình. Đắc nhân tâm và cái Tài trong mỗi người chúng ta. Đắc Nhân Tâm trong ý nghĩa đó cần được thụ đắc bằng sự hiểu rõ bản thân, thành thật với chính mình, hiểu biết và quan tâm đến những người xung quanh để nhìn ra và khơi gợi những tiềm năng ẩn khuất nơi họ, giúp họ phát triển lên một tầm cao mới. Đây chính là nghệ thuật cao nhất về con người và chính là ý nghĩa sâu sắc nhất đúc kết từ những nguyên tắc vàng của Dale Carnegie. Quyển sách đã từng mang đến thành công và hạnh phúc cho hàng triệu người trên khắp thế giới. Và bây giờ các bạn và tôi cùng bắt đầu phân tích và tìm hiểu nó !',
+    chapter: {
+      chapter1: 'Đắc Nhân Tâm - Phần 1',
+      chapter2: 'Đắc Nhân Tâm - Phần 2',
+      chapter3: 'Đắc Nhân Tâm - Phần 3',
+      chapter4: 'Đắc Nhân Tâm - Phần 4',
+      chapter5: 'Đắc Nhân Tâm - Phần 5',
+    },
+    url: require('../../tracks/dnt.mp3'),
   },
   {
     name: 'Đắc Nhân Tâm',
@@ -44,6 +61,14 @@ const data = [
     imageUrl: require('../../images/dnt.jpg'),
     des:
       'Đắc nhân tâm (tên tiếng Anh là How to Win Friends and Influence People) là một quyển sách tự giúp bản thân, do Dale Carnegie viết và đã được xuất bản lần đầu vào năm 1936, nó đã được dịch ra các thứ tiếng và bán trên khắp thế giới. Quyển sách đưa ra các lời khuyên về cách thức cư xử, ứng xử và giao tiếp với mọi người để đạt được thành công trong cuộc sống. Không còn nữa khái niệm giới hạn Đắc Nhân Tâm là nghệ thuật thu phục lòng người, là làm cho tất cả mọi người yêu mến mình. Đắc nhân tâm và cái Tài trong mỗi người chúng ta. Đắc Nhân Tâm trong ý nghĩa đó cần được thụ đắc bằng sự hiểu rõ bản thân, thành thật với chính mình, hiểu biết và quan tâm đến những người xung quanh để nhìn ra và khơi gợi những tiềm năng ẩn khuất nơi họ, giúp họ phát triển lên một tầm cao mới. Đây chính là nghệ thuật cao nhất về con người và chính là ý nghĩa sâu sắc nhất đúc kết từ những nguyên tắc vàng của Dale Carnegie. Quyển sách đã từng mang đến thành công và hạnh phúc cho hàng triệu người trên khắp thế giới. Và bây giờ các bạn và tôi cùng bắt đầu phân tích và tìm hiểu nó !',
+    chapter: {
+      chapter1: 'Đắc Nhân Tâm - Phần 1',
+      chapter2: 'Đắc Nhân Tâm - Phần 2',
+      chapter3: 'Đắc Nhân Tâm - Phần 3',
+      chapter4: 'Đắc Nhân Tâm - Phần 4',
+      chapter5: 'Đắc Nhân Tâm - Phần 5',
+    },
+    url: require('../../tracks/dnt.mp3'),
   },
   {
     name: 'Đắc Nhân Tâm',
@@ -51,7 +76,16 @@ const data = [
     imageUrl: require('../../images/dnt.jpg'),
     des:
       'Đắc nhân tâm (tên tiếng Anh là How to Win Friends and Influence People) là một quyển sách tự giúp bản thân, do Dale Carnegie viết và đã được xuất bản lần đầu vào năm 1936, nó đã được dịch ra các thứ tiếng và bán trên khắp thế giới. Quyển sách đưa ra các lời khuyên về cách thức cư xử, ứng xử và giao tiếp với mọi người để đạt được thành công trong cuộc sống. Không còn nữa khái niệm giới hạn Đắc Nhân Tâm là nghệ thuật thu phục lòng người, là làm cho tất cả mọi người yêu mến mình. Đắc nhân tâm và cái Tài trong mỗi người chúng ta. Đắc Nhân Tâm trong ý nghĩa đó cần được thụ đắc bằng sự hiểu rõ bản thân, thành thật với chính mình, hiểu biết và quan tâm đến những người xung quanh để nhìn ra và khơi gợi những tiềm năng ẩn khuất nơi họ, giúp họ phát triển lên một tầm cao mới. Đây chính là nghệ thuật cao nhất về con người và chính là ý nghĩa sâu sắc nhất đúc kết từ những nguyên tắc vàng của Dale Carnegie. Quyển sách đã từng mang đến thành công và hạnh phúc cho hàng triệu người trên khắp thế giới. Và bây giờ các bạn và tôi cùng bắt đầu phân tích và tìm hiểu nó !',
+    chapter: {
+      chapter1: 'Đắc Nhân Tâm - Phần 1',
+      chapter2: 'Đắc Nhân Tâm - Phần 2',
+      chapter3: 'Đắc Nhân Tâm - Phần 3',
+      chapter4: 'Đắc Nhân Tâm - Phần 4',
+      chapter5: 'Đắc Nhân Tâm - Phần 5',
+    },
+    url: require('../../tracks/dnt.mp3'),
   },
+  
 ];
 
 class Featured extends React.Component {
@@ -68,11 +102,12 @@ class Featured extends React.Component {
       <TouchableOpacity
         onPress={() =>
           nav.navigate('BookDetail', {
-            img: item.imageUrl,
+            imageUrl: item.imageUrl,
             name: item.name,
             author: item.author,
             des: item.des,
             chapter: item.chapter,
+            url: item.url
           })
         }>
         <Image style={styles.flat} source={item.imageUrl} />

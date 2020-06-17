@@ -18,22 +18,22 @@ class BookDetails extends React.Component {
   constructor(props, route) {
     super(props, route);
     this.state = {
-      route : this.props,
-      chapter: route.params,
-      data: [
-        this.chapter
-      ],
+      route: this.props,
+      name: route.name,
+      author: route.author,
+      imageUrl: route.imageUrl,
+      url: route.url,
     };
   }
 
   render() {
     const {route} = this.props;
-    const {img, name, author, des, chapter} = route.params;
+    const {imageUrl, name, author, des, chapter} = route.params;
     const {navigation} = this.props;
     return (
       <ScrollView style={styles.bg} showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
-          <Image style={styles.img} source={img} />
+          <Image style={styles.img} source={imageUrl} />
           <View style={styles.na}>
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.author}>{author}</Text>
@@ -93,7 +93,13 @@ class BookDetails extends React.Component {
           <View style={{backgroundColor: '#F2F9FF', paddingBottom: 10}}>
             <Text style={styles.title}>Chapters</Text>
             <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}
+              onPress={() => navigation.navigate('PlayScreen', {
+                name: this.state.name,
+                author: this.state.author,
+                imageUrl: this.state.imageUrl,
+                url: this.state.url,
+              })}>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -178,7 +184,17 @@ class BookDetails extends React.Component {
               />
             </TouchableOpacity>
           </View>
-          <Text style={{alignSelf: 'center', marginHorizontal: 10, marginVertical: 10, paddingBottom: 100}}>If you are the copyright owner of this audio and believe it has been uploaded without your permission, please send an email to brady@enclave.vn about the copyright infringement</Text>
+          <Text
+            style={{
+              alignSelf: 'center',
+              marginHorizontal: 10,
+              marginVertical: 10,
+              paddingBottom: 100,
+            }}>
+            If you are the copyright owner of this audio and believe it has been
+            uploaded without your permission, please send an email to
+            brady@enclave.vn about the copyright infringement
+          </Text>
         </View>
       </ScrollView>
     );
