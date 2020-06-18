@@ -92,7 +92,7 @@ class BookDetails extends React.Component {
                     'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
                   id: id,
                   duration: duration,
-                  chapter: chapters.chapter1
+                  chapter: chapters.chapter1,
                 })
               }>
               <Text
@@ -110,8 +110,20 @@ class BookDetails extends React.Component {
                 name="play-circle"
               />
             </TouchableOpacity>
-            {/* <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}
+              onPress={() =>
+                navigation.navigate('PlayScreen', {
+                  name: name,
+                  author: author,
+                  imageUrl: imageUrl,
+                  url:
+                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  id: id,
+                  duration: duration,
+                  chapter: chapters.chapter2,
+                })
+              }>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -119,7 +131,7 @@ class BookDetails extends React.Component {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                {chapter.chapter2}
+                {chapters.chapter1.chapterName}
               </Text>
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
@@ -128,7 +140,19 @@ class BookDetails extends React.Component {
               />
             </TouchableOpacity>
             <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}
+              onPress={() =>
+                navigation.navigate('PlayScreen', {
+                  name: name,
+                  author: author,
+                  imageUrl: imageUrl,
+                  url:
+                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  id: id,
+                  duration: duration,
+                  chapter: chapters.chapter3,
+                })
+              }>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -136,7 +160,7 @@ class BookDetails extends React.Component {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                {chapter.chapter3}
+                {chapters.chapter1.chapterName}
               </Text>
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
@@ -145,7 +169,19 @@ class BookDetails extends React.Component {
               />
             </TouchableOpacity>
             <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}
+              onPress={() =>
+                navigation.navigate('PlayScreen', {
+                  name: name,
+                  author: author,
+                  imageUrl: imageUrl,
+                  url:
+                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  id: id,
+                  duration: duration,
+                  chapter: chapters.chapter4,
+                })
+              }>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -153,7 +189,7 @@ class BookDetails extends React.Component {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                {chapter.chapter4}
+                {chapters.chapter1.chapterName}
               </Text>
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
@@ -161,8 +197,20 @@ class BookDetails extends React.Component {
                 name="play-circle"
               />
             </TouchableOpacity>
-            <TouchableOpacity */}
-              {/* style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+            <TouchableOpacity
+              style={{justifyContent: 'space-between', flexDirection: 'row'}}
+              onPress={() =>
+                navigation.navigate('PlayScreen', {
+                  name: name,
+                  author: author,
+                  imageUrl: imageUrl,
+                  url:
+                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  id: id,
+                  duration: duration,
+                  chapter: chapters.chapter5,
+                })
+              }>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -170,14 +218,14 @@ class BookDetails extends React.Component {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                {chapter.chapter5}
+                {chapters.chapter1.chapterName}
               </Text>
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
                 size={20}
                 name="play-circle"
               />
-            </TouchableOpacity> */}
+            </TouchableOpacity>
           </View>
           <Text
             style={{

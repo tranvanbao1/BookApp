@@ -18,7 +18,8 @@ const data = [
       chapter1: {
         chapterId: 1,
         chapterName: 'Đắc Nhân Tâm - Phần 1',
-        audioUrl: 'http://techslides.com/demos/samples/sample.mp3',
+        audioUrl:
+          'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
       },
       chapter2: {
         chapterId: 2,
