@@ -1,20 +1,21 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
-
 import Player from './TrackPlayer';
-// import playlistData from '../data/playlist.json';
-// import localTrack from '../tracks/dnt.mp3';
 
-export default function PlaylistScreen() {
+export default function PlaylistScreen({route}) {
+  
   const playbackState = usePlaybackState();
+  const playlistData = route.params;
+  const chapter = playlistData.chapter;
 
-  useEffect(() => {
-    setup();
+  useEffect(async () => {
+    console.log(playlistData)
+    await setup();
   }, []);
 
   async function setup() {
-    await TrackPlayer.setupPlayer({});
+    await TrackPlayer.setupPlayer();
     await TrackPlayer.updateOptions({
       stopWithApp: true,
       capabilities: [
@@ -30,30 +31,30 @@ export default function PlaylistScreen() {
       ],
     });
   }
-
+  
   async function togglePlayback() {
-    const {route} = this.props;
-    const {imageUrl, name, author, url} = route.params;
   const currentTrack = await TrackPlayer.getCurrentTrack();
+    
     if (currentTrack == null) {
       await TrackPlayer.reset();
-      await TrackPlayer.add(imageUrl, name, author, url);
       await TrackPlayer.add({
-        url: {url},
-        name: {name},
-        author: {author},
-        imageUrl: {imageUrl},
-        duration: 28,
-      });
-      await TrackPlayer.play();
+        id: chapter.chapterId,
+        url:
+          chapter.audioUrl,
+        name: chapter.chapterName,
+        author: playlistData.author,
+        imageUrl:
+          'https://miro.medium.com/max/1400/1*zoXoMBQSAvq-THRJCG6QZg.jpeg',
+      });    
+      TrackPlayer.play();
     } else {
       if (playbackState === TrackPlayer.STATE_PAUSED) {
-        await TrackPlayer.play();
       } else {
         await TrackPlayer.pause();
       }
     }
   }
+
 
   return (
     <View style={styles.container}>
@@ -70,6 +71,7 @@ export default function PlaylistScreen() {
         onTogglePlayback={togglePlayback}
       />
       <Text style={styles.state}>{getStateName(playbackState)}</Text>
+      <Text>{playlistData.author}</Text>
     </View>
   );
 }

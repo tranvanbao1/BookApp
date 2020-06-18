@@ -15,20 +15,9 @@ import Icon2 from 'react-native-vector-icons/Feather';
 import ReadMore from 'react-native-read-more-text';
 
 class BookDetails extends React.Component {
-  constructor(props, route) {
-    super(props, route);
-    this.state = {
-      route: this.props,
-      name: route.name,
-      author: route.author,
-      imageUrl: route.imageUrl,
-      url: route.url,
-    };
-  }
-
   render() {
     const {route} = this.props;
-    const {imageUrl, name, author, des, chapter} = route.params;
+    const {imageUrl, name, author, des, chapters, id, duration, url} = route.params;
     const {navigation} = this.props;
     return (
       <ScrollView style={styles.bg} showsVerticalScrollIndicator={false}>
@@ -94,12 +83,18 @@ class BookDetails extends React.Component {
             <Text style={styles.title}>Chapters</Text>
             <TouchableOpacity
               style={{justifyContent: 'space-between', flexDirection: 'row'}}
-              onPress={() => navigation.navigate('PlayScreen', {
-                name: this.state.name,
-                author: this.state.author,
-                imageUrl: this.state.imageUrl,
-                url: this.state.url,
-              })}>
+              onPress={() =>
+                navigation.navigate('PlayScreen', {
+                  name: name,
+                  author: author,
+                  imageUrl: imageUrl,
+                  url:
+                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  id: id,
+                  duration: duration,
+                  chapter: chapters.chapter1
+                })
+              }>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -107,7 +102,7 @@ class BookDetails extends React.Component {
                   fontSize: 16,
                   fontWeight: '700',
                 }}>
-                {chapter.chapter1}
+                {chapters.chapter1.chapterName}
               </Text>
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
@@ -115,7 +110,7 @@ class BookDetails extends React.Component {
                 name="play-circle"
               />
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={{justifyContent: 'space-between', flexDirection: 'row'}}>
               <Text
                 style={{
@@ -166,8 +161,8 @@ class BookDetails extends React.Component {
                 name="play-circle"
               />
             </TouchableOpacity>
-            <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+            <TouchableOpacity */}
+              {/* style={{justifyContent: 'space-between', flexDirection: 'row'}}>
               <Text
                 style={{
                   marginHorizontal: 10,
@@ -182,7 +177,7 @@ class BookDetails extends React.Component {
                 size={20}
                 name="play-circle"
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
           <Text
             style={{
