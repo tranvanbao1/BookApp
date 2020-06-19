@@ -88,8 +88,7 @@ class BookDetails extends React.Component {
                   name: name,
                   author: author,
                   imageUrl: imageUrl,
-                  url:
-                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
+                  url: url, 
                   id: id,
                   duration: duration,
                   chapter: chapters.chapter1,
@@ -110,122 +109,7 @@ class BookDetails extends React.Component {
                 name="play-circle"
               />
             </TouchableOpacity>
-            <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}
-              onPress={() =>
-                navigation.navigate('PlayScreen', {
-                  name: name,
-                  author: author,
-                  imageUrl: imageUrl,
-                  url:
-                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
-                  id: id,
-                  duration: duration,
-                  chapter: chapters.chapter2,
-                })
-              }>
-              <Text
-                style={{
-                  marginHorizontal: 10,
-                  marginVertical: 5,
-                  fontSize: 16,
-                  fontWeight: '700',
-                }}>
-                {chapters.chapter1.chapterName}
-              </Text>
-              <Icon2
-                style={{alignSelf: 'center', marginRight: 10}}
-                size={20}
-                name="play-circle"
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}
-              onPress={() =>
-                navigation.navigate('PlayScreen', {
-                  name: name,
-                  author: author,
-                  imageUrl: imageUrl,
-                  url:
-                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
-                  id: id,
-                  duration: duration,
-                  chapter: chapters.chapter3,
-                })
-              }>
-              <Text
-                style={{
-                  marginHorizontal: 10,
-                  marginVertical: 5,
-                  fontSize: 16,
-                  fontWeight: '700',
-                }}>
-                {chapters.chapter1.chapterName}
-              </Text>
-              <Icon2
-                style={{alignSelf: 'center', marginRight: 10}}
-                size={20}
-                name="play-circle"
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}
-              onPress={() =>
-                navigation.navigate('PlayScreen', {
-                  name: name,
-                  author: author,
-                  imageUrl: imageUrl,
-                  url:
-                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
-                  id: id,
-                  duration: duration,
-                  chapter: chapters.chapter4,
-                })
-              }>
-              <Text
-                style={{
-                  marginHorizontal: 10,
-                  marginVertical: 5,
-                  fontSize: 16,
-                  fontWeight: '700',
-                }}>
-                {chapters.chapter1.chapterName}
-              </Text>
-              <Icon2
-                style={{alignSelf: 'center', marginRight: 10}}
-                size={20}
-                name="play-circle"
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{justifyContent: 'space-between', flexDirection: 'row'}}
-              onPress={() =>
-                navigation.navigate('PlayScreen', {
-                  name: name,
-                  author: author,
-                  imageUrl: imageUrl,
-                  url:
-                    'https://drive.google.com/uc?export=download&id=1VM9_umeyzJn0v1pRzR1BSm9y3IhZ3c0E',
-                  id: id,
-                  duration: duration,
-                  chapter: chapters.chapter5,
-                })
-              }>
-              <Text
-                style={{
-                  marginHorizontal: 10,
-                  marginVertical: 5,
-                  fontSize: 16,
-                  fontWeight: '700',
-                }}>
-                {chapters.chapter1.chapterName}
-              </Text>
-              <Icon2
-                style={{alignSelf: 'center', marginRight: 10}}
-                size={20}
-                name="play-circle"
-              />
-            </TouchableOpacity>
+            
           </View>
           <Text
             style={{

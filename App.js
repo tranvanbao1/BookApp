@@ -11,7 +11,6 @@ import Book from './src/components/home/Book';
 import BookDetail from './src/pages/BookDetail';
 import Detail from './src/pages/detail';
 import PlayScreen from './src/pages/PlayScreen';
-// import TrackPlayer from './src/pages/TrackPlayer';
 const HomeStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +21,6 @@ const HomeStackScreen = () => {
       <HomeStack.Screen name="Book" component={Book} />
       <HomeStack.Screen name="BookDetail" component={BookDetail} />
       <HomeStack.Screen name="PlayScreen" component={PlayScreen} />
-      {/* <HomeStack.Screen name="TrackPlayer" component={TrackPlayer} /> */}
       <HomeStack.Screen name="Detail" component={Detail} />
     </HomeStack.Navigator>
   );

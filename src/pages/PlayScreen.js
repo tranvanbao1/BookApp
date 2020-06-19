@@ -39,12 +39,10 @@ export default function PlaylistScreen({route}) {
       await TrackPlayer.reset();
       await TrackPlayer.add({
         id: chapter.chapterId,
-        url:
-          chapter.audioUrl,
+        url: chapter.audioUrl,
         name: chapter.chapterName,
         author: playlistData.author,
-        imageUrl:
-          'https://miro.medium.com/max/1400/1*zoXoMBQSAvq-THRJCG6QZg.jpeg',
+        imageUrl: require('../images/dnt.jpg'),
       });    
       TrackPlayer.play();
     } else {
