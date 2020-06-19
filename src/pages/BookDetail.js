@@ -103,6 +103,7 @@ class BookDetails extends React.Component {
                 }}>
                 {chapters.chapter1.chapterName}
               </Text>
+              
               <Icon2
                 style={{alignSelf: 'center', marginRight: 10}}
                 size={20}

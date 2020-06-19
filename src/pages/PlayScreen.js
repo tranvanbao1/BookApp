@@ -2,15 +2,15 @@ import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 import Player from './TrackPlayer';
-
-export default function PlaylistScreen({route}) {
-  
+import HeaderBar from '../components/home/HeaderBar';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+export default function PlaylistScreen({route, navigation}) {
   const playbackState = usePlaybackState();
   const playlistData = route.params;
   const chapter = playlistData.chapter;
 
   useEffect(async () => {
-    console.log(playlistData)
+    console.log(playlistData);
     await setup();
   }, []);
 
@@ -31,10 +31,10 @@ export default function PlaylistScreen({route}) {
       ],
     });
   }
-  
+
   async function togglePlayback() {
-  const currentTrack = await TrackPlayer.getCurrentTrack();
-    
+    const currentTrack = await TrackPlayer.getCurrentTrack();
+
     if (currentTrack == null) {
       await TrackPlayer.reset();
       await TrackPlayer.add({
@@ -42,8 +42,9 @@ export default function PlaylistScreen({route}) {
         url: chapter.audioUrl,
         name: chapter.chapterName,
         author: playlistData.author,
-        imageUrl: 'https://images.squarespace-cdn.com/content/v1/5a5906400abd0406785519dd/1552662149940-G6MMFW3JC2J61UBPROJ5/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/baelen.jpg?format=1500w',
-      });    
+        imageUrl:
+          'https://images.squarespace-cdn.com/content/v1/5a5906400abd0406785519dd/1552662149940-G6MMFW3JC2J61UBPROJ5/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/baelen.jpg?format=1500w',
+      });
       TrackPlayer.play();
     } else {
       if (playbackState === TrackPlayer.STATE_PAUSED) {
@@ -54,9 +55,9 @@ export default function PlaylistScreen({route}) {
     }
   }
 
-
   return (
     <View style={styles.container}>
+      <HeaderBar nav={navigation} />
       <Text style={styles.description}>
         We'll be inserting a playlist into the library loaded from
         `playlist.json`. We'll also be using the `ProgressComponent` which
@@ -75,9 +76,9 @@ export default function PlaylistScreen({route}) {
   );
 }
 
-PlaylistScreen.navigationOptions = {
-  name: 'Playlist Example',
-};
+// PlaylistScreen.navigationOptions = {
+//   name: 'Playlist Example',
+// };
 
 function getStateName(state) {
   switch (state) {
